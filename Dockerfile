@@ -18,4 +18,6 @@ RUN wget http://download.netbeans.org/netbeans/8.2/final/bundles/netbeans-8.2-li
     rm -rf /tmp/* &&\
     ln -s $(ls -d /usr/local/netbeans-*) /usr/local/netbeans
 
+RUN echo 'netbeans_jdkhome="/usr/lib/jvm/oracle-java8-jdk-amd64"' >>/usr/local/netbeans-8.2/etc/netbeans.conf
+
 CMD /usr/local/netbeans/bin/netbeans
