@@ -20,4 +20,6 @@ RUN wget http://download.netbeans.org/netbeans/8.2/final/bundles/netbeans-8.2-li
 
 RUN echo 'netbeans_jdkhome="/usr/lib/jvm/oracle-java8-jdk-amd64"' >>/usr/local/netbeans-8.2/etc/netbeans.conf
 
+ENV TZ="Europe/Brussels"
+
 CMD /usr/local/netbeans/bin/netbeans
