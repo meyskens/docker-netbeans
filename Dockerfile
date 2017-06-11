@@ -7,7 +7,7 @@ COPY ojdbc7.jar /jars/ojdbc7.jar
 
 #Install the JDK
 RUN echo "deb http://httpredir.debian.org/debian/ stretch main contrib" >>/etc/apt/sources.list &&\
-    apt-get update && apt-get install -y java-package java-common fakeroot &&\
+    apt-get update && apt-get install -y java-package java-common fakeroot firefox &&\
     su -c 'echo y | fakeroot make-jpkg jdk-*' user &&\
     dpkg -i *.deb &&\
     rm -r jdk*
